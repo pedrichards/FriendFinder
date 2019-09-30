@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
     .slidecontainer {
       width: 100%;
@@ -97,164 +98,187 @@
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
                   </ul>
                 </div>
-                <!-- <input type="range" min="1" max="5" value="3" class="slider" id="myRange1"> -->
-                <!-- <p>1: Strongly Disagree / 5: Strongly Agree <span id="demo1"></span></p> -->
               </div>
               <div>
-                <h3>Question 2</h3>
-                <p>How much sass can you take before your day is ruined?</p>
                 <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" id="menu1" type="button"
+                    data-toggle="dropdown">Dropdown Example
                     <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
                   </ul>
                 </div>
               </div>
-              <div>
-                <h3>Question 3</h3>
-                <p>How unsafe generally do you view rolling through stop-signs as being?</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
+              <h3>Question 2</h3>
+              <p>How much sass can you take before your day is ruined?</p>
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">
+                  <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+                </ul>
               </div>
-              <div>
-                <h3>Question 4</h3>
-                <p>Politics are too difficult and convoluted to discuss often.</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu4" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3>Question 5</h3>
-                <p>Animals have thoughts as well as emotions</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu5" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-
-              </div>
-              <div>
-                <h3>Question 6</h3>
-                <p>Humor is the best way to break down barriers</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu6" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3>Question 7</h3>
-                <p>It's classier for a photog to read if people don't want to be in their photos and not shoot</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu7" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu7">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3>Question 8</h3>
-                <p>Art is of value to society</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu8" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu8">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3>Question 9</h3>
-                <p>Fiction can be a reliable source of information</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu9" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu9">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <h3>Question 10</h3>
-                <p>The internet is a most reliable source of information</p>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu10" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu10">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary submit">Submit</button>
-            </form>
           </div>
+          <div>
+            <h3>Question 3</h3>
+            <p>How unsafe generally do you view rolling through stop-signs as being?</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Question 4</h3>
+            <p>Politics are too difficult and convoluted to discuss often.</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu4" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Question 5</h3>
+            <p>Animals have thoughts as well as emotions</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu5" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div>
+            <h3>Question 6</h3>
+            <p>Humor is the best way to break down barriers</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu6" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Question 7</h3>
+            <p>It's classier for a photog to read if people don't want to be in their photos and not shoot</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu7" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu7">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Question 8</h3>
+            <p>Art is of value to society</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu8" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu8">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Question 9</h3>
+            <p>Fiction can be a reliable source of information</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu9" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu9">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Question 10</h3>
+            <p>The internet is a most reliable source of information</p>
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu10" type="button" data-toggle="dropdown">
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="menu10">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
+              </ul>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary submit">Submit</button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <footer class="footer">
-      <div class="container">
-        <p>
-          <a href="/api/friends">API Friend List</a> |
-          <a href="https://github.com/pedrichards/FriendFinder">GithubRepo</a>
-      </div>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/api/friends">API Friend List</a> |
+        <a href="https://github.com/pedrichards/FriendFinder">GithubRepo</a>
+    </div>
+  </footer>
 
   </div>
-  <script>
+  <script type="text/javascript"> function showMyModalSetTitle(myName, myImage) {
 
+      /*
+       * '#myModayTitle' and '#myModalBody' refer to the 'id' of the HTML tags in
+       * the modal HTML code that hold the title and body respectively. These id's
+       * can be named anything, just make sure they are added as necessary.
+       *
+       */
+
+      $('#myModalTitle').html(myName);
+      $('#myModalBody').html(myImage);
+
+      $('#myModal').modal('show');
+    }
 
 
 
@@ -272,8 +296,9 @@
       var differential;
       var totaldifferential;
       var difArray;
-      for (i = 0; i < friendjects.length; i++) {
-        var currentCompare = friendjects[i];
+      var friendjectsValues = friendjects.slice(2);
+      for (i = 0; i < friendjectsValues.length; i++) {
+        var currentCompare = friendjectsValues[i];
         for (i = 0; i < currentCompare.length; i++) {
           differential = math.abs(currentArray[i] - currentCompare[i]);
           totaldifferential = differential++;
@@ -292,7 +317,8 @@
         var i;
         var i = new Random().nextInt(num);
         var fIndex = bestCandidateArray[i];
-        return friendjects(fIndex);
+        var selected = friendjects(fIndex);
+        showMyModalSetTitle(selected[0], selected[11])
       }
     }
     function makeFriend() {
