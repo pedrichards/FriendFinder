@@ -11,42 +11,6 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <style>
-    .slidecontainer {
-      width: 100%;
-    }
-
-    .slider {
-      -webkit-appearance: none;
-      width: 100%;
-      height: 25px;
-      background: #d3d3d3;
-      outline: none;
-      opacity: 0.7;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-    }
-
-    .slider:hover {
-      opacity: 1;
-    }
-
-    .slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 25px;
-      height: 25px;
-      background: #4CAF50;
-      cursor: pointer;
-    }
-
-    .slider::-moz-range-thumb {
-      width: 25px;
-      height: 25px;
-      background: #4CAF50;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 <body>
@@ -77,208 +41,139 @@
           <div class="card-body">
             <form role="form">
               <div class="form-group">
-                <label for="reserve-name">Name (Required)</label>
+                <label for="friend-name">Name (Required)</label>
                 <input type="text" class="form-control" id="survey-name">
               </div>
               <div class="form-group">
-                <label for="reserve-phone">Link To Image (Required)</label>
+                <label for="friend-image">Link To Image (Required)</label>
                 <input type="text" class="form-control" id="survey-image">
               </div>
               <div>
                 <h3>Question 1</h3>
                 <p>Do you like opinions?</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 2</h3>
+                <p>How much sass can you take before your day is ruined?</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 3</h3>
+                <p>How unsafe generally do you view rolling through stop-signs as being?</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 4</h3>
+                <p>Politics are too difficult and convoluted to discuss often.</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 5</h3>
+                <p>Animals have thoughts as well as emotions</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 6</h3>
+                <p>Humor is the best way to break down barriers</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 7</h3>
+                <p>It's classier for a photog to read if people don't want to be in their photos and not shoot</p>
+                <select class="userSelect">
+                  <option>1 (Strongly Disagree)</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5 (Strongly Agree)</option>
+                </select>
+                <h3>Question 8</h3>
+                <p>Art is of value to society</p>
                 <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div>
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" id="menu1" type="button"
-                    data-toggle="dropdown">Dropdown Example
-                    <span class="caret"></span></button>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-                    <li role="presentation" class="divider"></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-                  </ul>
-                </div>
-              </div>
-              <h3>Question 2</h3>
-              <p>How much sass can you take before your day is ruined?</p>
-              <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">
-                  <span class="caret"></span></button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-                </ul>
-              </div>
+                  <select class="userSelect">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                  </select>
+                  <h3>Question 9</h3>
+                  <p>Fiction can be a reliable source of information</p>
+                  <select class="userSelect">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                  </select>
+                  <h3>Question 10</h3>
+                  <p>The internet is a most reliable source of information</p>
+                  <select class="userSelect">
+                    <option>1 (Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Strongly Agree)</option>
+                  </select>
+                  <br>
+                  <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
           </div>
-          <div>
-            <h3>Question 3</h3>
-            <p>How unsafe generally do you view rolling through stop-signs as being?</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3>Question 4</h3>
-            <p>Politics are too difficult and convoluted to discuss often.</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu4" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3>Question 5</h3>
-            <p>Animals have thoughts as well as emotions</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu5" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-
-          </div>
-          <div>
-            <h3>Question 6</h3>
-            <p>Humor is the best way to break down barriers</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu6" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3>Question 7</h3>
-            <p>It's classier for a photog to read if people don't want to be in their photos and not shoot</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu7" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu7">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3>Question 8</h3>
-            <p>Art is of value to society</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu8" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu8">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3>Question 9</h3>
-            <p>Fiction can be a reliable source of information</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu9" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu9">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3>Question 10</h3>
-            <p>The internet is a most reliable source of information</p>
-            <div class="dropdown">
-              <button class="btn btn-primary dropdown-toggle" id="menu10" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu10">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1 (Strongly Disagree)</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4/a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5 (Strongly Agree)</a></li>
-              </ul>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary submit">Submit</button>
-          </form>
         </div>
       </div>
     </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">API Friend List</a> |
+          <a href="https://github.com/pedrichards/FriendFinder">GithubRepo</a>
+      </div>
+    </footer>
+
   </div>
+  <script type="text/javascript">
+    // var friendData = require("../data/friends");
+    // function showMyModalSetTitle(myName, myImage) {
 
+    //   /*
+    //    * '#myModayTitle' and '#myModalBody' refer to the 'id' of the HTML tags in
+    //    * the modal HTML code that hold the title and body respectively. These id's
+    //    * can be named anything, just make sure they are added as necessary.
+    //    *
+    //    */
 
-  <footer class="footer">
-    <div class="container">
-      <p>
-        <a href="/api/friends">API Friend List</a> |
-        <a href="https://github.com/pedrichards/FriendFinder">GithubRepo</a>
-    </div>
-  </footer>
+    //   $('#myModalTitle').html(myName);
+    //   $('#myModalBody').html(myImage);
 
-  </div>
-  <script type="text/javascript"> function showMyModalSetTitle(myName, myImage) {
-
-      /*
-       * '#myModayTitle' and '#myModalBody' refer to the 'id' of the HTML tags in
-       * the modal HTML code that hold the title and body respectively. These id's
-       * can be named anything, just make sure they are added as necessary.
-       *
-       */
-
-      $('#myModalTitle').html(myName);
-      $('#myModalBody').html(myImage);
-
-      $('#myModal').modal('show');
-    }
+    //   $('#myModal').modal('show');
+    // }
 
 
 
@@ -289,69 +184,70 @@
     // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
     // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
     // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-    var currentFriendArray = [];
-    function runFinder() {
-      var currentArray = currentFriendArray;
-      var friendsRelative = [];
-      var differential;
-      var totaldifferential;
-      var difArray;
-      var friendjectsValues = friendjects.slice(2);
-      for (i = 0; i < friendjectsValues.length; i++) {
-        var currentCompare = friendjectsValues[i];
-        for (i = 0; i < currentCompare.length; i++) {
-          differential = math.abs(currentArray[i] - currentCompare[i]);
-          totaldifferential = differential++;
-        }
-        totaldifferential.push(difArray);
-      }
-      var smallest = difArray[0];
-      var refArray = [];
+    // var currentFriendArray = [];
+    // function runFinder() {
+    //   var currentArray = currentFriendArray;
+    //   var friendsRelative = [];
+    //   var differential;
+    //   var totaldifferential;
+    //   var difArray;
+    //   var friendjectsValues = friendjects.slice(2);
+    //   for (i = 0; i < friendjectsValues.length; i++) {
+    //     var currentCompare = friendjectsValues[i];
+    //     for (i = 0; i < currentCompare.length; i++) {
+    //       differential = math.abs(currentArray[i] - currentCompare[i]);
+    //       totaldifferential = differential++;
+    //     }
+    //     totaldifferential.push(difArray);
+    //   }
+    //   var smallest = difArray[0];
+    //   var refArray = [];
 
-      for (var i = 0; i < difArray.length; i++) {
-        if (difArray[i] < smallest) {
-          i.push(bestcandidateArray);
-        }
+    //   for (var i = 0; i < difArray.length; i++) {
+    //     if (difArray[i] < smallest) {
+    //       i.push(bestcandidateArray);
+    //     }
 
-        var num = bestCandidateArray.length;
-        var i;
-        var i = new Random().nextInt(num);
-        var fIndex = bestCandidateArray[i];
-        var selected = friendjects(fIndex);
-        showMyModalSetTitle(selected[0], selected[11])
-      }
-    }
-    function makeFriend() {
-      var x = slider1.value;
-      x.push(currentFriendArray);
-      var x = slider2.value;
-      x.push(currentFriendArray);
-      var x = slider3.value;
-      x.push(currentFriendArray);
-      var x = slider4.value;
-      x.push(currentFriendArray);
-      var x = slider5.value;
-      x.push(currentFriendArray);
-      var x = slider6.value;
-      x.push(currentFriendArray);
-      var x = slider7.value;
-      x.push(currentFriendArray);
-      var x = slider8.value;
-      x.push(currentFriendArray);
-      var x = slider9.value;
-      x.push(currentFriendArray);
-      var x = slider10.value;
-      x.push(currentFriendArray);
-      console.log(currentFriendArray);
-    }
+    //     var num = bestCandidateArray.length;
+    //     var i;
+    //     var i = new Random().nextInt(num);
+    //     var fIndex = bestCandidateArray[i];
+    //     var selected = friendjects(fIndex);
+    //     showMyModalSetTitle(selected[0], selected[11])
+    //   }
+    // }
+
 
     $(".submit").on("click", function (event) {
       event.preventDefault();
-      makeFriend();
+      let user = {
+        name: $("#friend-name").val(), photo: $("#friend-image").val(), scores: []
+      };
+
+      $(".userSelect").each(function (index, selectElement) {
+        user.scores.push($(selectElement).val().charAt(0));
+        console.log("select elem", $(selectElement).val().charAt(0));
+      })
+
+      $.post("/api/friends", user,
+        function (data) {
+          // console.log(data);
+          // console.log("user", user)
+          // friendData.push(data);
+
+
+          // Clear the form when submitting
+          $("#friend-name").val("");
+          $("#friend-image").val("");
+
+
+        });
+
+      // makeFriend();
       //MUST ADD CURRENT FRIEND TO THIS FUNCTION STILL
-      runFinder();
+      // runFinder();
       //CURRENT FRIEND THEN GETS PUSHED TO FRIENDJECTS ARRAY
-      currentFriendArray.push(friendjects);
+      // currentFriendArray.push(friendjects);
 
 
     });
