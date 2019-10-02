@@ -7,65 +7,7 @@
 var friendData = require("../data/friends");
 
 
-function showMyModalSetTitle(myName, myImage) {
 
-  /*
-   * '#myModayTitle' and '#myModalBody' refer to the 'id' of the HTML tags in
-   * the modal HTML code that hold the title and body respectively. These id's
-   * can be named anything, just make sure they are added as necessary.
-   *
-   */
-
-  $('#myModalTitle').html(myName);
-  $('#myModalBody').html(myImage);
-
-  $('#myModal').modal('show');
-}
-
-function runFinder() {
-  newUser = req.body;
-  // var currentArray = friendData
-  // console.log("currentArray", currentArray);
-  var newUserScores = newUser[0].scores;
-  //Or newUser.scores ???
-  // console.log("currentArrayScores", currentArrayScores);
-  // console.log("currentArray.scores", currentArray[0].scores);
-  var candidates = friendData
-  var differential = 0;
-  var totaldifferential = 0;
-  var difArray = [];
-  // var friendjectsValues = friendData;
-  for (i = 0; i < candidates.length; i++) {
-    var currentCandidate = friendData[i];
-    var currentCandidateScores = friendData[i].scores;
-    var currentCompare = candidates[i].scores;
-    // console.log("currentCompare", currentCompare);
-    for (j = 0; j < currentCompare.length; j++) {
-      differential = Math.abs(newUserScores[j] - currentCandidateScores[j]);
-      totaldifferential = differential++;
-    }
-    difArray.push(totaldifferential);
-  }
-  var smallest = [difArray[0]];
-  // var refArray = [];
-
-  for (var i = 0; i < difArray.length; i++) {
-    if (difArray[i] < smallest) {
-      smallest = [difArray[i]];
-    }
-    else if (difArray[i] = smallest[0]) {
-      smallest.push(difArray[i]);
-    }
-    console.log("smallest", smallest);
-    var num = smallest.length;
-    var i;
-    var i = new Random().nextInt(num);
-    var fIndex = smallest[i];
-    var selected = friendData[fIndex];
-    console.log(selected.name, selected.photo);
-    showMyModalSetTitle(selected.name, selected.photo);
-  }
-}
 
 
 // ===============================================================================
@@ -97,24 +39,21 @@ module.exports = function (app) {
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
     console.log("req.body", req.body);
-    // currentFriendArray = req.body;
+    var newUser = req.body;
 
-    newUser = req.body;
-    // var currentArray = friendData
-    // console.log("currentArray", currentArray);
     var newUserScores = newUser.scores;
     //Or newUser.scores ???
 
     var candidates = friendData
     var differential = 0;
-    var totaldifferential = 0;
+    // var totaldifferential = 0;
     var difArray = [];
 
     for (i = 0; i < candidates.length; i++) {
       var currentCandidate = friendData[i];
       var currentCandidateScores = friendData[i].scores;
       var currentCompare = candidates[i].scores;
-      totaldifferential = 0;
+      var totaldifferential = 0;
       // console.log(newUserScores[j]);
       // console.log( currentCandidateScores[j]);
       // console.log("currentCompare", currentCompare);
@@ -126,38 +65,39 @@ module.exports = function (app) {
     }
     console.log("difArray", difArray);
     var smallest = [difArray[0]];
-    var bestMatch = [0];
+    var bestMatch = [];
     console.log("smallest", smallest);
     // var refArray = [];
 
-    for (var i = 1; i < difArray.length; i++) {
+    for (var i = 0; i < difArray.length; i++) {
       if (difArray[i] < smallest[0]) {
-        bestMatch = [i];
+        bestMatch = [friendData[i]];
         smallest = [difArray[i]];
         console.log("smallest <", smallest);
         console.log("bestMatch <", bestMatch);
       }
       else if (difArray[i] === smallest[0]) {
-        bestMatch.push(i);
+        bestMatch.push(friendData[i]);
         smallest.push(difArray[i]);
 
-        console.log("bestMatch =", bestMatch[0]);
+        console.log("bestMatch =", bestMatch);
         console.log("smallest =", smallest);
       }
     }
     console.log("smallest", smallest);
-    var num = smallest.length;
+    var num = bestMatch.length;
     var i;
     var i = Math.floor(Math.random() * num);
-    var fIndex = bestMatch[i];
-    var selected = friendData[fIndex];
-    console.log("selected", selected.name, selected.photo);
+    var selected = bestMatch[i];
+    console.log("selected", selected);
 
     //logic to find best friend
-    friendData.push(req.body);
+    friendData.push(newUser);
+    //logic to find best friend
+
     console.log("friendData", friendData);
-    res.json({ ok: 'we made it!' })
-    // res.json();
+    res.json(selected)
+    // res.json(selected.name, selected.photo);
 
   });
 
