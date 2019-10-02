@@ -59,7 +59,7 @@
                   <option>5 (Strongly Agree)</option>
                 </select>
                 <h3>Question 2</h3>
-                <p>How much sass can you take before your day is ruined?</p>
+                <p>A person can take plenty of sass before their day is ruined?</p>
                 <select class="userSelect">
                   <option>1 (Strongly Disagree)</option>
                   <option>2</option>
@@ -177,45 +177,6 @@
 
 
 
-
-    // < !--BELOW CODE IS CRITICAL.IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER-- >
-
-    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-    // var currentFriendArray = [];
-    // function runFinder() {
-    //   var currentArray = currentFriendArray;
-    //   var friendsRelative = [];
-    //   var differential;
-    //   var totaldifferential;
-    //   var difArray;
-    //   var friendjectsValues = friendjects.slice(2);
-    //   for (i = 0; i < friendjectsValues.length; i++) {
-    //     var currentCompare = friendjectsValues[i];
-    //     for (i = 0; i < currentCompare.length; i++) {
-    //       differential = math.abs(currentArray[i] - currentCompare[i]);
-    //       totaldifferential = differential++;
-    //     }
-    //     totaldifferential.push(difArray);
-    //   }
-    //   var smallest = difArray[0];
-    //   var refArray = [];
-
-    //   for (var i = 0; i < difArray.length; i++) {
-    //     if (difArray[i] < smallest) {
-    //       i.push(bestcandidateArray);
-    //     }
-
-    //     var num = bestCandidateArray.length;
-    //     var i;
-    //     var i = new Random().nextInt(num);
-    //     var fIndex = bestCandidateArray[i];
-    //     var selected = friendjects(fIndex);
-    //     showMyModalSetTitle(selected[0], selected[11])
-    //   }
-    // }
 
 
     $(".submit").on("click", function (event) {
