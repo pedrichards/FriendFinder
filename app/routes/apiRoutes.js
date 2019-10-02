@@ -23,17 +23,23 @@ function showMyModalSetTitle(myName, myImage) {
 }
 
 function runFinder() {
-  var currentArray = friendData.slice(-1);
-  var candidates = friendData.slice(0, -1);
-  var friendsRelative = [];
+  var currentArray = friendData
+  console.log("currentArray", currentArray);
+  var currentArrayScores = currentArray[0].scores;
+  console.log("currentArrayScores", currentArrayScores);
+  console.log("currentArray.scores", currentArray[0].scores);
+  var candidates = friendData
   var differential = 0;
   var totaldifferential = 0;
   var difArray = [];
   // var friendjectsValues = friendData;
   for (i = 0; i < candidates.length; i++) {
+    var currentCandidate = friendData[i];
+    var currentCandidateScores = friendData[i].scores;
     var currentCompare = candidates[i].scores;
-    for (i = 0; i < currentCompare.length; i++) {
-      differential = Math.abs(currentArray[i] - currentCompare[i]);
+    console.log("currentCompare", currentCompare);
+    for (j = 0; j < currentCompare.length; j++) {
+      differential = Math.abs(currentArrayScores[j] - currentCompare[j]);
       totaldifferential = differential++;
     }
     difArray.push(totaldifferential);
@@ -46,9 +52,9 @@ function runFinder() {
       smallest = [difArray[i]];
     }
     else if (difArray[i] = smallest[0]) {
-      smallest.push(difArray[i];)
+      smallest.push(difArray[i]);
     }
-
+    console.log(smallest);
     var num = bestCandidateArray.length;
     var i;
     var i = new Random().nextInt(num);
@@ -59,6 +65,47 @@ function runFinder() {
   }
 }
 
+
+// newUser = req.body;
+// // var currentArray = friendData
+// // console.log("currentArray", currentArray);
+// var newUserScores = newUser[0].scores;
+// //Or newUser.scores ???
+// // console.log("currentArrayScores", currentArrayScores);
+// // console.log("currentArray.scores", currentArray[0].scores);
+// var candidates = friendData
+// var differential = 0;
+// var totaldifferential = 0;
+// var difArray = [];
+// // var friendjectsValues = friendData;
+// for (i = 0; i < candidates.length; i++) {
+//   var currentCandidate = friendData[i];
+//   var currentCandidateScores = friendData[i].scores;
+//   var currentCompare = candidates[i].scores;
+//   // console.log("currentCompare", currentCompare);
+//   for (j = 0; j < currentCompare.length; j++) {
+//     differential = Math.abs(newUserScores[j] - currentCandidateScores[j]);
+//     totaldifferential = differential++;
+//   }
+//   difArray.push(totaldifferential);
+// }
+// var smallest = [difArray[0]];
+// // var refArray = [];
+
+// for (var i = 0; i < difArray.length; i++) {
+//   if (difArray[i] < smallest) {
+//     smallest = [difArray[i]];
+//   }
+//   else if (difArray[i] = smallest[0]) {
+//     smallest.push(difArray[i]);
+//   }
+//   console.log("smallest", smallest);
+//   var num = smallest.length;
+//   var i;
+//   var i = new Random().nextInt(num);
+//   var fIndex = smallest[i];
+//   var selected = friendData[fIndex];
+//   console.log(selected.name, selected.photo);
 
 // ===============================================================================
 // ROUTING
@@ -89,14 +136,13 @@ module.exports = function (app) {
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
     console.log("req.body", req.body);
-    currentFriendArray = req.body;
-    runFinder();
+    // currentFriendArray = req.body;
+
     //logic to find best friend
     friendData.push(req.body);
     console.log(friendData);
-    res.json();
+    res.json({ ok: 'we made it!' });
+    // res.json();
+  }
 
-  });
-
-
-};
+})
