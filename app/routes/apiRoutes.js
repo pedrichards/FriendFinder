@@ -98,47 +98,58 @@ module.exports = function (app) {
     // req.body is available since we're using the body parsing middleware
     console.log("req.body", req.body);
     // currentFriendArray = req.body;
-    newUser = req.body;
 
     newUser = req.body;
     // var currentArray = friendData
     // console.log("currentArray", currentArray);
     var newUserScores = newUser.scores;
     //Or newUser.scores ???
-    // console.log("currentArrayScores", currentArrayScores);
-    // console.log("currentArray.scores", currentArray[0].scores);
+
     var candidates = friendData
     var differential = 0;
     var totaldifferential = 0;
     var difArray = [];
-    // var friendjectsValues = friendData;
+
     for (i = 0; i < candidates.length; i++) {
       var currentCandidate = friendData[i];
       var currentCandidateScores = friendData[i].scores;
       var currentCompare = candidates[i].scores;
+      totaldifferential = 0;
+      // console.log(newUserScores[j]);
+      // console.log( currentCandidateScores[j]);
       // console.log("currentCompare", currentCompare);
-      for (j = 0; j < currentCompare.length; j++) {
-        differential = Math.abs(newUserScores[j] - currentCandidateScores[j]);
-        totaldifferential = differential++;
+      for (j = 0; j < currentCandidateScores.length; j++) {
+        differential = Math.abs(parseInt(newUserScores[j]) - parseInt(currentCandidateScores[j]));
+        totaldifferential += differential;
       }
       difArray.push(totaldifferential);
     }
+    console.log("difArray", difArray);
     var smallest = [difArray[0]];
+    var bestMatch = [0];
+    console.log("smallest", smallest);
     // var refArray = [];
 
-    for (var i = 0; i < difArray.length; i++) {
-      if (difArray[i] < smallest) {
+    for (var i = 1; i < difArray.length; i++) {
+      if (difArray[i] < smallest[0]) {
+        bestMatch = [i];
         smallest = [difArray[i]];
+        console.log("smallest <", smallest);
+        console.log("bestMatch <", bestMatch);
       }
-      else if (difArray[i] = smallest[0]) {
+      else if (difArray[i] === smallest[0]) {
+        bestMatch.push(i);
         smallest.push(difArray[i]);
+
+        console.log("bestMatch =", bestMatch[0]);
+        console.log("smallest =", smallest);
       }
     }
     console.log("smallest", smallest);
     var num = smallest.length;
     var i;
     var i = Math.floor(Math.random() * num);
-    var fIndex = smallest[i];
+    var fIndex = bestMatch[i];
     var selected = friendData[fIndex];
     console.log("selected", selected.name, selected.photo);
 
