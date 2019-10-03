@@ -96,7 +96,7 @@ module.exports = function (app) {
     //logic to find best friend
 
     console.log("friendData", friendData);
-    res.json(selected)
+    res.json(selected);
     // res.json(selected.name, selected.photo);
 
   });

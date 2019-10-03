@@ -215,7 +215,7 @@
 
       $.post("/api/friends", user,
         function (data) {
-          // console.log(data);
+          console.log(data);
           // console.log("user", user)
           // friendData.push(data);
 
@@ -227,8 +227,9 @@
           $("#friend-image").val("");
           // Get the modal
           $('#friendModal').modal('show')
+          // <img id="friendImage" src="">
           $("#friendImage").attr("src", data.photo);
-          $("#friendName").val(data.name)
+          $("#friendName").text(data.name);
 
         });
 

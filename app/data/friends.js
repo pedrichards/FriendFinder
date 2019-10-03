@@ -24,7 +24,72 @@ var friendjects = [{
     "name": "Lou Ritter",
     "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkDAAAAJDhhZTI5NTk2LWQzZjUtNDJjZi1hMTM2LTQ3ZjNmYjE0YmY2NA.jpg",
     "scores": ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1']
-}, { "name": "Jordan Biason", "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAisAAAAJGUxYzc4YzA0LWQxMzUtNGI4NS04YTFiLTkwYzM0YTZkNzA2NA.jpg", "scores": ["4", "4", "2", "3", "2", "2", "3", "2", "4", "5"] }, { "name": "Mike", "photo": "link", "scores": ["3", "3", "3", "3", "2", "3", "3", "3", "3", "3"] }, { "name": "Mike", "photo": "link", "scores": ["3", "3", "3", "3", "2", "3", "3", "3", "3", "1"] }, { "name": "Mike", "photo": "link", "scores": ["3", "3", "3", "3", "2", "3", "3", "3", "1", "1"] }, { "name": "Mike", "photo": "link", "scores": ["3", "3", "3", "1", "1", "3", "1", "1", "1", "1"] }, { "name": "Mike", "photo": "link", "scores": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"] }, { "name": "andy", "photo": "https://d.newsweek.com/en/full/1186553/michael-myers-halloween-2018.jpg?w=737&f=cd6cb284ca68a2c291ba1e79b2330cd3", "scores": ["5", "1", "3", "5", "1", "1", "4", "3", "5", "5"] }, { "name": "Moose", "photo": "memoose", "scores": ["2", "3", "4", "4", "2", "3", "3", "2", "3", "2"] }, { "name": "blah", "photo": "<img>", "scores": ["2", "1", "2", "3", "4", "3", "2", "2", "2", "3"] }, { "name": "blah", "photo": "<img>", "scores": ["2", "1", "2", "3", "4", "3", "2", "2", "2", "3"] }, { "name": "blah", "photo": "blah", "scores": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"] }, { "name": "blah", "photo": "blah", "scores": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"] }, { "name": "3", "photo": "3", "scores": ["3", "1", "1", "1", "1", "1", "1", "1", "1", "1"] }];
+}, {
+    "name": "Jordan Biason",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAisAAAAJGUxYzc4YzA0LWQxMzUtNGI4NS04YTFiLTkwYzM0YTZkNzA2NA.jpg",
+    "scores": ["4", "4", "2", "3", "2", "2", "3", "2", "4", "5"]
+},
+{
+    "name": "Mike",
+    "photo": "link",
+    "scores": ["3", "3", "3", "3", "2", "3", "3", "3", "3", "3"]
+},
+{
+    "name": "Mike",
+    "photo": "link",
+    "scores": ["3", "3", "3", "3", "2", "3", "3", "3", "3", "1"]
+},
+{
+    "name":
+        "Mike", "photo":
+        "link",
+    "scores": ["3", "3", "3", "3", "2", "3", "3", "3", "1", "1"]
+},
+{
+    "name": "Mike",
+    "photo": "link",
+    "scores": ["3", "3", "3", "1", "1", "3", "1", "1", "1", "1"]
+},
+{
+    "name": "Mike",
+    "photo": "link",
+    "scores": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+},
+{
+    "name": "andy",
+    "photo": "https://d.newsweek.com/en/full/1186553/michael-myers-halloween-2018.jpg?w=737&f=cd6cb284ca68a2c291ba1e79b2330cd3",
+    "scores": ["5", "1", "3", "5", "1", "1", "4", "3", "5", "5"]
+},
+{
+    "name": "Moose",
+    "photo": "memoose",
+    "scores": ["2", "3", "4", "4", "2", "3", "3", "2", "3", "2"]
+},
+{
+    "name": "blah",
+    "photo": "<img>",
+    "scores": ["2", "1", "2", "3", "4", "3", "2", "2", "2", "3"]
+},
+{
+    "name": "blah",
+    "photo": "<img>",
+    "scores": ["2", "1", "2", "3", "4", "3", "2", "2", "2", "3"]
+},
+{
+    "name": "blah",
+    "photo": "blah",
+    "scores": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+},
+{
+    "name": "blah",
+    "photo": "blah",
+    "scores": ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+},
+{
+    "name": "3",
+    "photo": "3",
+    "scores": ["3", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
+}];
 
 // Note how we export the array. This makes it accessible to other files using require.
 module.exports = friendjects;
